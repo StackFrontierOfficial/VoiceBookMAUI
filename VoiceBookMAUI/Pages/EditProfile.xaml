@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.EditProfile"
+             Title="EditProfile">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Image Source="arrowleft.png"
+                   WidthRequest="30"
+                   Margin="20,0,0,0"
+                   HeightRequest="30"/>
+                <Label Text="Edit Profile" 
+                   FontSize="17"
+                   Margin="0,5,0,0"
+                   FontAttributes="Bold" 
+                   FontFamily="RobotoR"/>
+            </StackLayout>
+        </Frame>
+        <VerticalStackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="user1.png"
+                   Margin="0,20,0,0"
+                   WidthRequest="100"
+                   HeightRequest="100"/>
+            <Frame BackgroundColor="#009788"
+                   WidthRequest="80"
+                   Margin="0,-20,0,0"
+                   HasShadow="True"
+                   Padding="0,0,0,0"
+                   CornerRadius="20"
+                   HeightRequest="20">
+                <HorizontalStackLayout>
+                    <Label Text="&#xf083;"
+                           Margin="10,5,0,0"
+                           TextColor="White"
+                           FontFamily="FontAwesome"/>
+                    <Button Text="Change"
+                            TextColor="White"
+                            FontSize="12"
+                            Padding="0,0,0,0"
+                            Margin="5,0,0,0"
+                            BackgroundColor="Transparent"/>
+                </HorizontalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="2">
+            <Label Text="Name"
+                   TextColor="{StaticResource Gray300}"
+                   WidthRequest="130"
+                   FontSize="14"
+                   FontFamily="SpaceGR"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   Margin="20,20,0,0"
+                   HorizontalOptions="Start"/>
+            <Frame BackgroundColor="White" HasShadow="True" Grid.Row="1" BorderColor="#fafafa" HeightRequest="50" Margin="0,5,0,0"  WidthRequest="320" Padding="0,0,0,0" >
+                <Entry Text="Samantha Shah" 
+                       FontSize="16"
+                       Margin="10,10,0,0"
+                       FontAttributes="Bold" 
+                       FontFamily="RobotoR"/>
+            </Frame>
+            <Label Text="Email"
+                   TextColor="{StaticResource Gray300}"
+                   WidthRequest="130"
+                   FontSize="14"
+                   FontFamily="SpaceGR"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   Margin="20,20,0,0"
+                   HorizontalOptions="Start"/>
+            <Frame BackgroundColor="White" HasShadow="True" Grid.Row="1" BorderColor="#fafafa" HeightRequest="50" Margin="0,5,0,0"  WidthRequest="320" Padding="0,0,0,0" >
+                <Entry Text="shahsamantha@gmail.com" 
+                       FontSize="16"
+                       Margin="10,10,0,0"
+                       FontAttributes="Bold" 
+                       FontFamily="RobotoR"/>
+            </Frame>
+            <Label Text="Mobile Number"
+                   TextColor="{StaticResource Gray300}"
+                   WidthRequest="130"
+                   FontSize="14"
+                   FontFamily="SpaceGR"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   Margin="20,20,0,0"
+                   HorizontalOptions="Start"/>
+            <Frame BackgroundColor="White" HasShadow="True" Grid.Row="1" BorderColor="#fafafa" HeightRequest="50" Margin="0,5,0,0"  WidthRequest="320" Padding="0,0,0,0" >
+                <Entry Text="+91 1234567890" 
+                       FontSize="16"
+                       Margin="10,10,0,0"
+                       FontAttributes="Bold" 
+                       FontFamily="RobotoR"/>
+            </Frame>
+            <Label Text="Password"
+                   TextColor="{StaticResource Gray300}"
+                   WidthRequest="130"
+                   FontSize="14"
+                   FontFamily="SpaceGR"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   Margin="20,20,0,0"
+                   HorizontalOptions="Start"/>
+            <Frame BackgroundColor="White" HasShadow="True" Grid.Row="1" BorderColor="#fafafa" HeightRequest="50" Margin="0,5,0,0"  WidthRequest="320" Padding="0,0,0,0" >
+                <Entry Text="******" 
+                       FontSize="16"
+                       Margin="10,15,0,0"
+                       FontAttributes="Bold" 
+                       FontFamily="RobotoR"
+                       IsPassword="True"/>
+            </Frame>
+            <Button Text="Save"
+        WidthRequest="190"
+        HeightRequest="50"
+        BackgroundColor="#009788"
+        VerticalOptions="Start"
+        Margin="0,20,0,0"
+        FontAttributes="Bold"
+        FontSize="15"
+        FontFamily="RobotoR"
+        TextColor="White"
+        Grid.Row="3"/>
+        </VerticalStackLayout>
+        
+    </Grid>
+    
+</ContentPage>

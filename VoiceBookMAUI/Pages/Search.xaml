@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.Search"
+             Title="Search">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <Label Text="Search" 
+                   FontSize="17"
+                   Margin="20,5,0,0"
+                   FontAttributes="Bold" 
+                   FontFamily="RobotoR"/>
+        </Frame>
+        <Frame BackgroundColor="White" HasShadow="True" Grid.Row="1" BorderColor="#fafafa" HeightRequest="50" Margin="0,20,0,0"  WidthRequest="320" Padding="0,0,0,0" >
+            <SearchBar Placeholder="Search among audiobooks,authors..."
+                        FontSize="12"/>
+        </Frame>
+        <VerticalStackLayout Grid.Row="3" Margin="20,0,0,0">
+            <Label Text="Recent Searches:" 
+                   FontSize="17"
+                   Margin="0,20,0,0"
+                   FontAttributes="Bold" 
+                   FontFamily="RobotoR"/>
+            <Label Text="American gods" 
+                   FontSize="12"
+                   Margin="0,10,0,0"
+                   TextColor="{StaticResource Gray200}"
+                   FontFamily="SpaceGR"/>
+            <Label Text="Neil geiman" 
+                   FontSize="12"
+                   Margin="0,5,0,0"
+                   TextColor="{StaticResource Gray200}"
+                   FontFamily="SpaceGR"/>
+            <Label Text="Lord of the rings" 
+                   FontSize="12"
+                   TextColor="{StaticResource Gray200}"
+                   Margin="0,5,0,0"
+                   FontFamily="SpaceGR"/>
+            <Label Text="Harry potter books" 
+                   FontSize="12"
+                   TextColor="{StaticResource Gray200}"
+                   Margin="0,5,0,0"
+                   FontFamily="SpaceGR"/>
+            <Label Text="Suggestion For You" 
+                   FontSize="17"
+                   Margin="0,30,0,0"
+                   FontAttributes="Bold" 
+                   FontFamily="RobotoR"/>
+        </VerticalStackLayout>
+        <ScrollView Orientation="Horizontal" Grid.Row="3" HorizontalScrollBarVisibility="Never" Margin="0,-40,0,0">
+            <HorizontalStackLayout Spacing="5"  Margin="0,-50,0,0">
+                <Border Background="Transparent" 
+                        WidthRequest="90" 
+                        HeightRequest="110"
+                        Margin="10,0,0,0"
+                        Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                    <ImageButton Source="book5.png"
+                           Aspect="AspectFit"/>
+                </Border>
+                <Border Background="Transparent" 
+                        WidthRequest="90" 
+                        HeightRequest="110"
+                        Margin="-10,0,0,0"
+                        Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                    <ImageButton Source="book6.png"/>
+                </Border>
+                <Border Background="Transparent" 
+                        WidthRequest="90" 
+                        HeightRequest="110"
+                        Margin="-10,0,0,0"
+                        Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                    <ImageButton Source="book7.png"/>
+                </Border>
+                <Border Background="Transparent" 
+                        WidthRequest="90" 
+                        HeightRequest="110"
+                        Margin="-10,0,0,0"
+                        Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                    <ImageButton Source="book8.png"/>
+                </Border>
+                <Border Background="Transparent" 
+                        WidthRequest="90" 
+                        HeightRequest="110"
+                        Margin="0,0,0,0"
+                        Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                    <ImageButton Source="book9.png"/>
+                </Border>
+            </HorizontalStackLayout>
+        </ScrollView>
+        <Grid ColumnDefinitions="*,*,*" Grid.Row="3" VerticalOptions="End">
+            <VerticalStackLayout HorizontalOptions="Center"
+                                 HeightRequest="60"
+                                 Margin="0,0">
+                <Image Source="compass.png"
+                       WidthRequest="20"
+                       Margin="0,15,0,0"
+                       HeightRequest="20"/>
+                <Label Text="Discover"
+                       FontFamily="RobotoR"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout HorizontalOptions="Center"
+                                 Grid.Column="1"
+                                 HeightRequest="30"
+                                 Margin="0,-10">
+                <Label Text="&#xf002;"
+                       FontFamily="FontAwesome"
+                       TextColor="#009788"
+                       FontSize="18"
+                       WidthRequest="20"
+                       HeightRequest="20"/>
+                <Button Text="Search"
+                       TextColor="#009788"
+                        Margin="0,-15,0,0"
+                        BackgroundColor="Transparent"
+                       FontAttributes="Bold"
+                       FontFamily="RobotoR"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout HorizontalOptions="Center"
+                                 Grid.Column="2"
+                                 HeightRequest="30"
+                                 Margin="0,-10">
+                <Image Source="user.png"
+                       WidthRequest="20"
+                       HeightRequest="20"/>
+                <Label Text="Profile"
+                       FontFamily="RobotoR"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

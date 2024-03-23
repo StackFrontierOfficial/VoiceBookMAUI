@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.BookmarkedEmpty"
+             Title="BookmarkedEmpty">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Image Source="arrowleft.png"
+          WidthRequest="30"
+          Margin="20,0,0,0"
+          HeightRequest="30"/>
+                <Label Text="Bookmarked" 
+          FontSize="17"
+          Margin="0,5,0,0"
+          FontAttributes="Bold" 
+          FontFamily="RobotoR"/>
+            </StackLayout>
+        </Frame>
+        <StackLayout Grid.Row="1" Orientation="Vertical"
+             VerticalOptions="Center"
+                     Margin="0,-50,0,0"
+             HorizontalOptions="Center">
+            <Image Source="ribbon.png"
+           WidthRequest="40"
+           HeightRequest="40"/>
+            <Label Text="No Items in Bookmarked" 
+                  TextColor="{StaticResource Gray200}"/>
+        </StackLayout>
+    </Grid>
+    
+</ContentPage>

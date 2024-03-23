@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.Reviews"
+             Title="Reviews">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".1*"/>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width=".4*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="arrowleft.png"
+               WidthRequest="30"
+               Margin="20,0,0,0"
+               HeightRequest="30"/>
+                <Image Source="ribbon.png"
+               WidthRequest="30"
+               HorizontalOptions="Start"
+               Grid.Column="2"
+               Margin="20,0,0,0"
+               HeightRequest="30"/>
+                <Image Source="share.png"
+               WidthRequest="30"
+               HorizontalOptions="End"
+               Grid.Column="2"
+               Margin="20,0,30,0"
+               HeightRequest="30"/>
+            </Grid>
+        </Frame>
+        <VerticalStackLayout Grid.Row="1" Spacing="5" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            <Image Source="book18.png"
+           Margin="0,20,0,0"/>
+            <Label Text="Grant"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   FontFamily="RobotoR"
+                   HorizontalOptions="Center"/>
+            <Label Text="Rob Chernow"
+                   FontSize="15"
+                   FontFamily="RobotoR"
+                   TextColor="{StaticResource Gray300}"
+                   Margin="0,-5,0,0"
+                   HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+                <Label Text="4.0"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextColor="#d4ad52"/>
+                <Label Text="&#xf005;"
+                       FontSize="12"
+                       FontFamily="FontAwesome"
+                       Margin="0,2,0,0"
+                       TextColor="#d4ad52"/>
+                <Label Text="120 rated"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource Gray300}"/>
+            </StackLayout>
+            <Label Text="Mystery Thriller and Suspense"
+                   FontSize="11"
+                   FontFamily="RobotoR"
+                   TextColor="{StaticResource Gray300}"
+                   Margin="0,-5,0,0"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+        <RoundRectangle Grid.Row="2"
+                        BackgroundColor="#e7e7e7"
+                        HeightRequest="50"
+                        WidthRequest="300"
+                        Margin="20,10,20,10"
+                        CornerRadius="10"/>
+        <HorizontalStackLayout Grid.Row="2" Margin="35,10,0,10" HorizontalOptions="FillAndExpand">
+            <Button Text="About"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Margin="0,10,10,10"
+                    TextColor="Black"
+                    BackgroundColor="Transparent"
+                    FontFamily="RobotoR"
+                    FontAttributes="Bold"/>
+            <Button Text="Chapters"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Margin="0,10,0,10"
+                    TextColor="Black"
+                    BackgroundColor="Transparent"
+                    FontFamily="RobotoR"
+                    FontAttributes="Bold"/>
+            <Frame HeightRequest="40"
+                   WidthRequest="100"
+                   Padding="0,-3,0,0"
+                   Margin="0,0,0,0"
+                   BorderColor="Transparent">
+                <Button Text="Reviews"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        FontSize="17"
+                        TextColor="Black"
+                        Margin="0,0,0,0"
+                        BackgroundColor="Transparent"
+                        FontFamily="RobotoR"
+                        FontAttributes="Bold"/>
+            </Frame>
+            
+        </HorizontalStackLayout>
+        <ScrollView Grid.Row="3">
+            <VerticalStackLayout Grid.Row="3" VerticalOptions="Start" Margin="20,0,0,0">
+                <Label Text="Overall Ratings"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       FontFamily="RobotoR"
+                       Margin="10,0,0,0"
+                       HorizontalOptions="Start"/>
+                <StackLayout Orientation="Horizontal" HeightRequest="100" Spacing="10" VerticalOptions="Start">
+                    <Frame HeightRequest="100"
+                           WidthRequest="90"
+                           Margin="10,0,0,0"
+                           Padding="0,0,0,0"
+                           Background="#009788">
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label Text="4.2"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               FontFamily="RobotoR"
+                               TextColor="White"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+                            <Label Text="(130 Reviews)"
+                               FontSize="12"
+                               FontFamily="SpaceGR"
+                               TextColor="White"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout >
+                            <Label Text="5 Star"
+                                   FontSize="12"
+                                   FontFamily="SpaceGR"
+                                   TextColor="{StaticResource Gray300}"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"/>
+                            <AbsoluteLayout>
+                                <!-- Slider -->
+                                <Slider  Minimum="0"
+                                         Maximum="100"
+                                         Value="80"
+                                         WidthRequest="150"
+                                         HeightRequest="20"
+                                         VerticalOptions="CenterAndExpand"
+                                         HorizontalOptions="Center"
+                                         ThumbColor="#009788"
+                                         MinimumTrackColor="#009788"/>
+
+                                <!-- Disabled Button -->
+                                <Button IsEnabled="False"
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        BackgroundColor="Transparent"/>
+                            </AbsoluteLayout>
+
+                            <Label Text="88"
+                                   FontSize="12"
+                                   FontFamily="SpaceGR"
+                                   TextColor="{StaticResource Gray300}"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout >
+                            <Label Text="4 Star"
+                                   FontSize="12"
+                                   FontFamily="SpaceGR"
+                                   TextColor="{StaticResource Gray300}"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"/>
+                            <AbsoluteLayout>
+                                <!-- Slider -->
+                                <Slider  Minimum="0"
+                                         Maximum="100"
+                                         Value="60"
+                                         WidthRequest="150"
+                                         HeightRequest="20"
+                                         VerticalOptions="CenterAndExpand"
+                                         HorizontalOptions="Center"
+                                         ThumbColor="#009788"
+                                         MinimumTrackColor="#009788"/>
+
+                                <!-- Disabled Button -->
+                                <Button IsEnabled="False"
+                                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                    AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="Transparent"/>
+                            </AbsoluteLayout>
+
+                            <Label Text="60"
+                                   FontSize="12"
+                                   FontFamily="SpaceGR"
+                                   TextColor="{StaticResource Gray300}"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout >
+                            <Label Text="3 Star"
+                                   FontSize="12"
+                                   FontFamily="SpaceGR"
+                                   TextColor="{StaticResource Gray300}"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"/>
+                            <AbsoluteLayout>
+                                <!-- Slider -->
+                                <Slider  Minimum="0"
+                                     Maximum="100"
+                                     Value="45"
+                                     WidthRequest="150"
+                                     HeightRequest="20"
+                                     VerticalOptions="CenterAndExpand"
+                                     HorizontalOptions="Center"
+                                     ThumbColor="#009788"
+                                     MinimumTrackColor="#009788"/>
+
+                                <!-- Disabled Button -->
+                                <Button IsEnabled="False"
+                                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                    AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="Transparent"/>
+                            </AbsoluteLayout>
+
+                            <Label Text="35"
+                                   FontSize="12"
+                                   FontFamily="SpaceGR"
+                                   TextColor="{StaticResource Gray300}"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout >
+                            <Label Text="2 Star"
+                                   FontSize="12"
+                                   FontFamily="SpaceGR"
+                                   TextColor="{StaticResource Gray300}"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"/>
+                            <AbsoluteLayout>
+                                <!-- Slider -->
+                                <Slider  Minimum="0"
+                                     Maximum="100"
+                                     Value="30"
+                                     WidthRequest="150"
+                                     HeightRequest="20"
+                                     VerticalOptions="CenterAndExpand"
+                                     HorizontalOptions="Center"
+                                     ThumbColor="#009788"
+                                     MinimumTrackColor="#009788"/>
+
+                                <!-- Disabled Button -->
+                                <Button IsEnabled="False"
+                                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                    AbsoluteLayout.LayoutFlags="All"
+                                    BackgroundColor="Transparent"/>
+                            </AbsoluteLayout>
+
+                            <Label Text="25"
+                                   FontSize="12"
+                                   FontFamily="SpaceGR"
+                                   TextColor="{StaticResource Gray300}"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout >
+                            <Label Text="1 Star"
+                                   FontSize="12"
+                                   FontFamily="SpaceGR"
+                                   TextColor="{StaticResource Gray300}"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"/>
+                            <AbsoluteLayout>
+                                <!-- Slider -->
+                                <Slider  Minimum="0"
+                                         Maximum="100"
+                                         Value="15"
+                                         WidthRequest="150"
+                                         HeightRequest="20"
+                                         VerticalOptions="CenterAndExpand"
+                                         HorizontalOptions="Center"
+                                         ThumbColor="#009788"
+                                         MinimumTrackColor="#009788"/>
+
+                                <!-- Disabled Button -->
+                                <Button IsEnabled="False"
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        BackgroundColor="Transparent"/>
+                            </AbsoluteLayout>
+
+                            <Label Text="10"
+                                   FontSize="12"
+                                   FontFamily="SpaceGR"
+                                   TextColor="{StaticResource Gray300}"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Start"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+
+                </StackLayout>
+                <StackLayout VerticalOptions="Start" Margin="0,20,0,0">
+                    <Label Text="Reviews"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           FontFamily="RobotoR"
+                           Margin="10,0,0,0"
+                           HorizontalOptions="Start"/>
+                    <ListView ItemsSource="{Binding books}" HasUnevenRows="True" SelectionMode="None"  SeparatorVisibility="Default">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="20,0,0,0" HeightRequest="120">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height=".6*" />
+                                            <RowDefinition Height=".4*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width=".1*" />
+                                            <ColumnDefinition Width=".8*" />
+                                            <ColumnDefinition Width=".1*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="{Binding PersonImage}" Aspect="AspectFit"
+                                               WidthRequest="50" Margin="0,0,0,0" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" HeightRequest="50"/>
+                                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Start" HorizontalOptions="Start">
+                                            <Label Text="{Binding Name}"
+                                                   Margin="30,20,0,0" 
+                                                   TextColor="Black" 
+                                                   FontAttributes="Bold"
+                                                   FontSize="13" 
+                                                   FontFamily="RobotoR" 
+                                                   HorizontalOptions="Start"/>
+                                            <Label Text="{Binding Date}"
+                                                   TextColor="{StaticResource Gray200}" 
+                                                   FontSize="12" 
+                                                   FontFamily="RobotoR" 
+                                                   Margin="30,0,10,0"/>
+                                        </VerticalStackLayout>
+                                        <Label Text="{Binding Rating}" 
+                                               FontAttributes="Bold" 
+                                               FontFamily="SpaceGB" 
+                                               TextColor="#009788" 
+                                               Grid.Row="0"
+                                               Margin="-20,10,10,0"
+                                               HorizontalOptions="Start"
+                                               Grid.Column="2"/>
+                                        <Label Text="{Binding Review}" FontSize="12" Grid.Row="1" Grid.ColumnSpan="3" FontFamily="SpaceGB" TextColor="{StaticResource Gray300}"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+       
+        <HorizontalStackLayout Grid.Row="3" VerticalOptions="EndAndExpand" Spacing="20" Margin="30,10,0,10">
+            <Frame Padding="10"
+           CornerRadius="5"
+           WidthRequest="50"
+           HeightRequest="50"
+           BorderColor="{StaticResource Gray100}"
+           BackgroundColor="White"
+           HasShadow="True">
+                <Button Text="&#xf019;"
+                WidthRequest="50"
+                FontSize="20"
+                BackgroundColor="Transparent"
+                TextColor="#009788"
+                FontFamily="FontAwesome"
+                HeightRequest="50"/>
+            </Frame>
+            <Frame Padding="10"
+           CornerRadius="5"
+           WidthRequest="230"
+           HeightRequest="50"
+           BorderColor="{StaticResource Gray100}"
+           BackgroundColor="#009788"
+           HasShadow="True">
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="&#xf04b;"
+                    WidthRequest="50"
+                    FontSize="20"
+                    Margin="20,0,0,0"
+                    HorizontalOptions="Start"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontFamily="FontAwesome"
+                    HeightRequest="50"/>
+                    <Label Text="Start Listening"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   Margin="0,0,0,0"
+                   FontFamily="RobotoR"/>
+                </StackLayout>
+
+            </Frame>
+        </HorizontalStackLayout>
+       
+    </Grid>
+</ContentPage>

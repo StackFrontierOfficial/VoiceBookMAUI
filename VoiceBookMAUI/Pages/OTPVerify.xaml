@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.OTPVerify"
+             Title="OTPVerify">
+
+    <Grid RowDefinitions=".1*,.5*,.4*" BackgroundColor="{StaticResource Gray300}">
+        <Grid ColumnDefinitions="*,*"  >
+            <RoundRectangle Grid.ColumnSpan="2" 
+                BackgroundColor="#009788"
+                WidthRequest="360" 
+                HeightRequest="150"
+                CornerRadius="0,0,20,20"/>
+        </Grid>
+        <Grid Grid.Row="1" RowDefinitions=".1*,.2*,.15*,.15*,.15*,.15*" Margin="20,40,20,10">
+            <Label Text="Verify Your Mobile Number"
+               FontSize="15"
+               FontFamily="SpaceGB"
+               Margin="0,10,10,0"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="#009788"/>
+            <Label Text="Please check your messages and enter the verification code we just sent you
+                     +91 8364579670"
+               Grid.Row="1"
+               Margin="20,5,10,0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontFamily="RobotoR"
+               TextColor="{StaticResource Gray400}"/>
+            <Label Text="Enter Code Here"
+               Grid.Row="2"
+               FontSize="17"
+               FontFamily="SpaceGSB"
+               Margin="0,10,10,0"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource Gray900}"/>
+            <HorizontalStackLayout Grid.Row="3">
+                <Frame BorderColor="{StaticResource Gray600}"
+                   HasShadow="True"
+                   HeightRequest="40"
+                   WidthRequest="50"
+                   Margin="20,10,0,0"
+                   Padding="10,10,20,10">
+                    <Grid ColumnDefinitions=".2*,.8*">
+
+                        <Entry Placeholder="Email"
+                           Margin="0,0,0,0"
+                           WidthRequest="20"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End"
+                           FontFamily="SpaceGB"
+                           Grid.Column="1"
+                           Keyboard="Numeric"/>
+                    </Grid>
+                </Frame>
+                <Frame BorderColor="{StaticResource Gray600}"
+                   HasShadow="True"
+                   HeightRequest="40"
+                   WidthRequest="50"
+                   Margin="20,10,0,0"
+                   Padding="10,10,20,10">
+                    <Grid ColumnDefinitions=".2*,.8*">
+
+                        <Entry Placeholder="Email"
+                           Margin="0,0,0,0"
+                           WidthRequest="20"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End"
+                           FontFamily="SpaceGB"
+                           Grid.Column="1"
+                           Keyboard="Numeric"/>
+                    </Grid>
+                </Frame>
+                <Frame BorderColor="{StaticResource Gray600}"
+                   HasShadow="True"
+                   HeightRequest="40"
+                   WidthRequest="50"
+                   Margin="20,10,0,0"
+                   Padding="10,10,20,10">
+                    <Grid ColumnDefinitions=".2*,.8*">
+
+                        <Entry Placeholder="Email"
+                           Margin="0,0,0,0"
+                           WidthRequest="20"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End"
+                           FontFamily="SpaceGB"
+                           Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+                <Frame BorderColor="{StaticResource Gray600}"
+                   HasShadow="True"
+                   HeightRequest="40"
+                   WidthRequest="50"
+                   Margin="20,10,0,0"
+                   Padding="10,10,20,10">
+                    <Grid ColumnDefinitions=".2*,.8*">
+
+                        <Entry Placeholder="Email"
+                           Margin="0,0,0,0"
+                           WidthRequest="20"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End"
+                           FontFamily="SpaceGB"
+                           Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Grid.Row="4" HorizontalOptions="Start" Spacing="10" Margin="50,10,0,20">
+                <Label Text="Didn't you recieve Code?"
+                   FontFamily="RobotoR"
+                   TextColor="{StaticResource Gray400}"/>
+                <Label Text="Resend"
+                   FontFamily="RobotoR"
+                   FontAttributes="Bold"
+                   TextColor="#009788"/>
+            </HorizontalStackLayout>
+            <Button Text="Register"
+                FontFamily="SpaceGR"
+                FontAttributes="Bold"
+                FontSize="20"
+                Grid.Row="5" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="20,10,20,0" 
+                WidthRequest="250"
+                HeightRequest="50"
+                BackgroundColor="#009788"/>
+        </Grid>
+        <Frame Grid.RowSpan="2" 
+       Margin="10,150,30,-70"
+       BackgroundColor="White"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+       HeightRequest="150"
+               WidthRequest="250">
+            <VerticalStackLayout>
+                <ActivityIndicator Color="Black"
+                                   
+           IsRunning="True" />
+                <Label Text="Please wait..."
+       TextColor="Black"
+       HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+    
+</ContentPage>

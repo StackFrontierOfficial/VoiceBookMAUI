@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.Support"
+             Title="Support">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Image Source="arrowleft.png"
+      WidthRequest="30"
+      Margin="20,0,0,0"
+      HeightRequest="30"/>
+                <Label Text="Support" 
+      FontSize="17"
+      Margin="0,5,0,0"
+      FontAttributes="Bold" 
+      FontFamily="RobotoR"/>
+            </StackLayout>
+        </Frame>
+        <VerticalStackLayout Grid.Row="1">
+            <Frame BackgroundColor="White" HasShadow="True" Grid.Row="1" BorderColor="#fafafa" HeightRequest="50" Margin="0,20,0,0"  WidthRequest="320" Padding="10,0,10,0" >
+                <Entry Placeholder="Name"
+                FontSize="16"/>
+            </Frame>
+            <Frame BackgroundColor="White" HasShadow="True" Grid.Row="1" BorderColor="#fafafa" HeightRequest="50" Margin="0,20,0,0"  WidthRequest="320" Padding="10,0,10,0" >
+                <Entry Placeholder="Email"
+                       FontSize="16"/>
+            </Frame>
+            <Frame BackgroundColor="White" HasShadow="True" Grid.Row="1" BorderColor="#fafafa" HeightRequest="100" Margin="0,20,0,0"  WidthRequest="320" Padding="10,0,10,0" >
+                <Entry Placeholder="Write here"
+                       VerticalOptions="Center"
+    FontSize="16"/>
+            </Frame>
+            <Button Text="Submit"
+                    BackgroundColor="#009788"
+                    TextColor="White"
+                    FontSize="16"
+                    HeightRequest="40"
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    FontFamily="RobotoR"
+                    WidthRequest="150"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

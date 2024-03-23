@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.DownloadBook"
+             Title="DownloadBook">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout Spacing="10">
+            <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+                <StackLayout Orientation="Horizontal" Spacing="20">
+                    <Image Source="arrowleft.png"
+                           WidthRequest="30"
+                           Margin="20,0,0,0"
+                           HeightRequest="30"/>
+                    <Label Text="Download Audiobook" 
+                           FontSize="17"
+                           Margin="0,5,0,0"
+                           FontAttributes="Bold" 
+                           FontFamily="RobotoR"/>
+                </StackLayout>
+            </Frame>
+            <Label Text="Select chapters of the audiobook that you want to download."
+                   TextColor="{StaticResource Gray300}"
+                   Margin="20,0,0,0"
+                   FontSize="12"
+                   FontFamily="SpaceGR"/>
+        </VerticalStackLayout>
+       
+        <ListView ItemsSource="{Binding monkeys}" Grid.Row="1" HasUnevenRows="True" SelectionMode="None"  SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="20,10,0,0" HeightRequest="50">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".1*" />
+                                <ColumnDefinition Width=".9*" />
+                            </Grid.ColumnDefinitions>
+                            <Button Text="&#xf019;"
+                                    WidthRequest="50"
+                                    FontSize="20"
+                                    BackgroundColor="Transparent"
+                                    TextColor="#009788"
+                                    FontFamily="FontAwesome"
+                                    HeightRequest="40"/>
+                            <VerticalStackLayout Grid.Column="1" Grid.RowSpan="2" Margin="10,0,0,0">
+                                <Label Text="{Binding Chapter}"
+                                       FontAttributes="Bold"
+                                       TextColor="Black"/>
+                                <HorizontalStackLayout Spacing="30">
+                                    <Label Text="{Binding Duration}"
+                                           TextColor="{StaticResource Gray300}"
+                                           FontSize="11"
+                                           FontFamily="SpaceGR"/>
+                                    <Label Text="{Binding Size}"
+                                           FontSize="11"
+                                           TextColor="#009788"
+                                           FontFamily="SpaceGR"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>

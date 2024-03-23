@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.LibraryDownloaded"
+             Title="LibraryDownloaded">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Image Source="arrowleft.png"
+                       WidthRequest="30"
+                       Margin="20,0,0,0"
+                       HeightRequest="30"/>
+                <Label Text="My Library" 
+                       FontSize="17"
+                       Margin="0,5,0,0"
+                       FontAttributes="Bold" 
+                       FontFamily="RobotoR"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="{StaticResource Gray200}" 
+               HeightRequest="50" 
+               Grid.Row="1" 
+               Margin="20,20,20,20"
+               Padding="5,0,0,0">
+            <HorizontalStackLayout>
+                <Button Text="Downloaded"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        WidthRequest="150"
+                        HeightRequest="40"
+                        FontSize="16"
+                        Margin="0,0,0,0"
+                        Padding="0,0,0,0"
+                        FontFamily="RobotoR"/>
+                <Button Text="Shelves"
+                        TextColor="Black"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        WidthRequest="150"
+                        HeightRequest="40"
+                        FontSize="16"
+                        Margin="0,0,0,0"
+                        Padding="0,0,0,0"
+                        FontFamily="RobotoR"/>
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame BackgroundColor="White" HasShadow="True" Grid.Row="2" BorderColor="#fafafa" HeightRequest="50"  WidthRequest="320" Padding="0,0,0,0" >
+            <SearchBar Placeholder="Search among audiobooks..."
+                FontSize="12"/>
+        </Frame>
+        <ListView ItemsSource="{Binding books}" Grid.Row="3" Margin="20,20,20,20" HasUnevenRows="True" SelectionMode="None"  SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="0,10,0,0" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".1*" />
+                                <ColumnDefinition Width=".9*" />
+                            </Grid.ColumnDefinitions>
+                            <ImageButton Source="playbutton.png"
+                                         WidthRequest="15"
+                                         BackgroundColor="Transparent"
+                                         HeightRequest="15"/>
+                            <VerticalStackLayout Grid.Column="1" Margin="10,0,0,0" HeightRequest="40">
+                                <Label Text="{Binding Chapter}"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       FontFamily="SpaceGB"
+                                       TextColor="Black"/>
+                                <Label Text="{Binding Size}"
+                                       FontSize="10"
+                                       FontFamily="SpaceGB"
+                                       TextColor="{StaticResource Gray300}"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.PaymentConfirmation"
+             Title="PaymentConfirmation">
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Image Source="checkcircle.png"
+               />
+        <Label Text="Success!"
+               FontSize="25"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               FontFamily="RobotoR"/>
+        <Label Text="Money successfully added to your wallet"
+               FontSize="13"
+                HorizontalTextAlignment="Center"
+               TextColor="{StaticResource Gray200}"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Your Updated Wallet Balance is:"
+                   Margin="-10,10,0,0"
+                   FontAttributes="Bold"
+                   FontSize="15"/>
+            <Label Text="$30.50"
+                   TextColor="#009788"
+                   FontSize="16"
+                   Margin="10,7,0,0"
+                   FontAttributes="Bold"
+                   FontFamily="SpaceGR"/>
+        </StackLayout>
+        <Button Text="Back to Home"
+                BackgroundColor="#009788"
+                WidthRequest="190"
+                HeightRequest="50"
+                FontAttributes="Bold"
+                FontSize="15"
+                FontFamily="RobotoR"
+                Margin="0,20,0,0"
+                HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

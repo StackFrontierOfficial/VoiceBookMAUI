@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.RemovedFromBookmark"
+             Title="RemovedFromBookmark">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Image Source="arrowleft.png"
+             WidthRequest="30"
+             Margin="20,0,0,0"
+             HeightRequest="30"/>
+                <Label Text="Bookmarked" 
+             FontSize="17"
+             Margin="0,5,0,0"
+             FontAttributes="Bold" 
+             FontFamily="RobotoR"/>
+            </StackLayout>
+        </Frame>
+        <ListView ItemsSource="{Binding monkeys}" Grid.Row="1" Margin="10,20,0,0" HasUnevenRows="True" SelectionMode="None"  SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="20,10,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Frame BackgroundColor="Transparent"
+                Grid.RowSpan="2"
+                HeightRequest="120"
+                WidthRequest="90"
+                Margin="0,0,-10,0"
+                BorderColor="Transparent"
+                ZIndex="10000"
+                CornerRadius="0">
+                                <Image Grid.RowSpan="2"
+                    Source="{Binding ImageUrl}"
+                    Aspect="AspectFit"
+                    HeightRequest="120"
+                    WidthRequest="110"/>
+                            </Frame>
+
+                            <Frame Grid.RowSpan="2"
+                                        Grid.Column="1"
+                                        ZIndex="0"
+                                        WidthRequest="240"
+                                        Padding="30,5,0,0"
+                                        HeightRequest="85"
+                                        Margin="0,0,0,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".8*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <VerticalStackLayout>
+                                        <Label Text="{Binding Name}"
+                                                        FontSize="16"
+                                                        FontFamily="RobotoR"
+                                                        FontAttributes="Bold" />
+                                        <Label Text="{Binding Location}"
+                                                        TextColor="#c9c9c9"
+                                                        FontAttributes="Bold"/>
+                                        <StackLayout Orientation="Horizontal" Spacing="5">
+                                            <Label Text="4.0"
+                                                            FontSize="12"
+                                                            FontAttributes="Bold"
+                                                            TextColor="#d4ad52"/>
+                                            <Label Text="&#xf005;"
+                                                            FontSize="12"
+                                                            FontFamily="FontAwesome"
+                                                            Margin="0,2,0,0"
+                                                            TextColor="#d4ad52"/>
+                                            <Label Text="120 rated"
+                                                            FontSize="12"
+                                                            FontAttributes="Bold"
+                                                            TextColor="#c9c9c9"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" Spacing="5" Margin="0,5,0,0">
+                                            <Label Text="3hr - 20 mins"
+                                                            FontSize="10"
+                                                            FontAttributes="Bold"
+                                                            TextColor="#c9c9c9"/>
+                                            <BoxView BackgroundColor="#c9c9c9"
+                                                              WidthRequest="1"/>
+                                            <Label Text="{Binding Details}"
+                                                            FontSize="10"
+                                                            FontAttributes="Bold"
+                                                            TextColor="#c9c9c9"/>
+                                        </StackLayout>
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout Grid.Column="1">
+
+                                        <Label Text="$2.50"
+                                                        TextColor="#1f8040"
+                                                        FontAttributes="Bold"
+                                                         VerticalOptions="End"
+                                                         Margin="30,50,10,0"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+
+                            </Frame>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Frame Grid.Row="2"
+               BackgroundColor="{StaticResource Gray500}"
+               VerticalOptions="EndAndExpand"
+               CornerRadius="0"
+               Padding="0,0,0,0"
+               HeightRequest="40">
+            <Label Text="Treasure of the Lost Sea removed from bookmark"
+                   TextColor="{StaticResource Gray200}"
+                   VerticalOptions="Center"
+                    Margin="10,0,0,0"/>
+        </Frame>
+    </Grid>
+</ContentPage>

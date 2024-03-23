@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
+             x:Class="VoiceBookMAUI.Pages.Home"
+             Title="Home">
+    <ScrollView Orientation="Vertical">
+        <Grid RowDefinitions=".6*,.4*">
+            <Grid RowDefinitions=".1*,.3*,.05*,.25*,.05*,.25*" Margin="20,10,0,0" RowSpacing="10">
+                <Frame Background="#fafafa"
+               BorderColor="Transparent"
+               WidthRequest="350"
+               Padding="10,0,0,0"
+               HeightRequest="50">
+                    <Grid ColumnDefinitions=".8*,.2*">
+                        <Label Text="Hello, Samantha!"
+                       HeightRequest="30" 
+                       Margin="0,10,0,0"
+                       FontAttributes="Bold"
+                       FontFamily="RobotoR"
+                       VerticalOptions="Start"
+                       FontSize="18"/>
+                        <Image Grid.Column="1"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       WidthRequest="30"
+                       HeightRequest="30"
+                       Margin="0,0,10,0"
+                       Source="user1.png"/>
+                    </Grid>
+                </Frame>
+                <ScrollView Orientation="Horizontal" Grid.Row="1" HorizontalScrollBarVisibility="Never">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Border Background="#e1bee8" WidthRequest="230" Stroke="Transparent" Margin="0,10,0,0" HeightRequest="100" StrokeShape="RoundRectangle 10,10,10,10">
+                            <Grid ColumnDefinitions=".7*,.3*">
+                                <VerticalStackLayout Spacing="10" >
+                                    <Label Text="Get Audio Books"
+                                   Margin="20,5,10,0"
+                                   FontFamily="RobotoR"
+                                   FontSize="17"
+                                   TextColor="White"
+                                   FontAttributes="Bold"/>
+                                    <Label Text="Lorem ipsum dolor sit amet, consectetur" 
+                                   Margin="20,-10,0,0" 
+                                   FontSize="10" 
+                                   TextColor="White" FontAttributes="Bold"/>
+                                    <Button Text="Explore Now"
+                                   TextColor="White"
+                                    Margin="-20,0,10,0"
+                                    WidthRequest="100"
+                                    FontSize="10"
+                                    FontAttributes="Bold"
+                                    CornerRadius="20"
+                                    HeightRequest="25"
+                                    Padding="0,0,0,0"
+                                    Background="#ad8db3"/>
+                                </VerticalStackLayout>
+                                <Image Source="banner1.png"
+                               Grid.Column="1"/>
+                            </Grid>
+                        </Border>
+                        <Border Background="#c5cae8" 
+                        WidthRequest="230" 
+                        Stroke="Transparent" 
+                        Margin="0,10,0,0"
+                        HeightRequest="100" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                            <Grid ColumnDefinitions=".7*,.3*">
+                                <VerticalStackLayout Spacing="10" >
+                                    <Label Text="Listening to"
+                                   Margin="20,5,10,0"
+                                   FontFamily="RobotoR"
+                                   FontSize="17"
+                                   TextColor="White"
+                                   FontAttributes="Bold"/>
+                                    <Label Text="Lorem ipsum dolor sit amet, consectetur" 
+                                   Margin="20,-10,0,0" 
+                                   FontSize="10" 
+                                   TextColor="White" FontAttributes="Bold"/>
+                                    <Button Text="Explore Now"
+                                    TextColor="White"
+                                    Margin="-20,0,10,0"
+                                    WidthRequest="100"
+                                    FontSize="10"
+                                    FontAttributes="Bold"
+                                    HeightRequest="25"
+                                    CornerRadius="20"
+                                    Padding="0,0,0,0"
+                                    Background="#9297b6"/>
+                                </VerticalStackLayout>
+                                <Image Source="banner2.png"
+                               Grid.Column="1"/>
+                            </Grid>
+                            <!--<Label Text="Listening to" Margin="10,5,10,0" FontSize="17" TextColor="White" FontAttributes="Bold"/>-->
+                        </Border>
+                        <!-- Add more items as needed -->
+                    </StackLayout>
+                </ScrollView>
+
+                <Label Text="Genres"
+               Grid.Row="2"
+               TextColor="Black"
+               Margin="0,0,0,-10"
+               FontAttributes="Bold"
+               FontFamily="RobotoR"
+               FontSize="18"/>
+                <ScrollView Orientation="Horizontal" Grid.Row="3" HorizontalScrollBarVisibility="Never">
+                    <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,10">
+                        <Border Background="#e1bee8" 
+                        WidthRequest="70" 
+                        HeightRequest="70"
+                        Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" >
+                                <Image Source="drama.png"
+                               WidthRequest="30"
+                               HeightRequest="30"/>
+                                <Label Text="Drama"
+                               FontFamily="SpaceGB"
+                               Margin="0,0,0,0"
+                               TextColor="White"/>
+                            </VerticalStackLayout>
+                        </Border>
+                        <Border Background="#ad8db3" 
+                        WidthRequest="70" 
+                        HeightRequest="70"
+                        Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                            <VerticalStackLayout VerticalOptions="Center" >
+                                <Image Source="history.png"
+                               HeightRequest="30"
+                               WidthRequest="30"/>
+                                <Label Text="History"
+                               FontFamily="SpaceGB"
+                               Margin="10,0,0,0"
+                               TextColor="White"/>
+                            </VerticalStackLayout>
+                        </Border>
+                        <Border Background="#89aac7" 
+                        WidthRequest="70" 
+                        HeightRequest="70"
+                        Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                            <VerticalStackLayout VerticalOptions="Center" >
+                                <Image Source="fantasy.png"
+                               HeightRequest="30"
+                               WidthRequest="30"/>
+                                <Label Text="Fantasy"
+                               FontFamily="SpaceGB"
+                               Margin="10,0,0,0"
+                               TextColor="White"/>
+                            </VerticalStackLayout>
+                        </Border>
+                        <Border Background="#82b9bb" 
+                        WidthRequest="70" 
+                        HeightRequest="70"
+                        Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                            <VerticalStackLayout VerticalOptions="Center" >
+                                <Image Source="horror.png"
+                             HeightRequest="30"
+                             WidthRequest="30"/>
+                                <Label Text="Horror"
+                               FontFamily="SpaceGB"
+                               Margin="15,0,0,0"
+                               FontSize="12"
+                               TextColor="White"/>
+                            </VerticalStackLayout>
+                        </Border>
+                        <Border Background="#a1cda9" 
+                        WidthRequest="70" 
+                        HeightRequest="70"
+                        Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                            <VerticalStackLayout VerticalOptions="Center" >
+                                <Image Source="religious.png"
+                               HeightRequest="30"
+                               WidthRequest="30"/>
+                                <Label Text="Religious"
+                               FontFamily="SpaceGB"
+                               Margin="10,0,0,0"
+                               FontSize="12"
+                               TextColor="White"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </StackLayout>
+                </ScrollView>
+                <Label Text="Continue Listening"
+          Grid.Row="4"
+          TextColor="Black"
+          Margin="0,0,0,-10"
+          FontAttributes="Bold"
+          FontFamily="RobotoR"
+          FontSize="18"/>
+                <ScrollView Orientation="Horizontal" Grid.Row="5" HorizontalScrollBarVisibility="Never">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Border Background="White" 
+                        WidthRequest="200" 
+                        Stroke="{StaticResource Gray200}"
+                        StrokeShape="RoundRectangle 10,10,10,10"
+                        HeightRequest="90">
+                            <Grid ColumnDefinitions=".3*,.6*,.1*">
+                                <Image Source="book1.png"
+                               WidthRequest="50"
+                               HeightRequest="50"/>
+                                <VerticalStackLayout Spacing="2" Grid.Column="1">
+                                    <Label Text="I Have a Dream"
+                                   TextColor="Black"
+                                   Margin="5,5,10,0"
+                                   FontFamily="RobotoR"
+                                   FontSize="15"
+                                   FontAttributes="Bold"/>
+                                    <Label Text="Rashmi Bansal" 
+                                   Margin="5,0,0,0" 
+                                   FontSize="13" 
+                                   TextColor="{StaticResource Gray200}" FontAttributes="Bold"/>
+                                    <Label Text="28% Completed" 
+                                   Margin="5,0,0,0" 
+                                   FontSize="13" 
+                                   FontAttributes="Bold"
+                                   TextColor="#468e56"/>
+                                    <ProgressBar  HorizontalOptions="FillAndExpand"
+                                          Margin="5,0,10,0"
+                                          ProgressColor="#30998e"
+                                          VerticalOptions="CenterAndExpand"
+                                          Progress="0.28" />
+                                </VerticalStackLayout>
+                                <Image Source="play.png"
+                               Grid.Column="2"
+                               WidthRequest="20"
+                               HeightRequest="20"
+                               Margin="0,0,10,10"
+                               VerticalOptions="End"/>
+
+                            </Grid>
+                        </Border>
+
+                        <Border Background="White" 
+                        WidthRequest="200" 
+                        Stroke="{StaticResource Gray200}"
+                        StrokeShape="RoundRectangle 10,10,10,10"
+                        HeightRequest="90">
+                            <Grid ColumnDefinitions=".3*,.6*,.1*">
+                                <Image Source="book2.png"
+                               WidthRequest="50"
+                               HeightRequest="50"/>
+                                <VerticalStackLayout Spacing="2" Grid.Column="1">
+                                    <Label Text="Last Breath"
+                                   TextColor="Black"
+                                   Margin="5,5,10,0"
+                                   FontFamily="RobotoR"
+                                   FontSize="15"
+                                   FontAttributes="Bold"/>
+                                    <Label Text="Durjoy Datta" 
+                                   Margin="5,0,0,0" 
+                                   FontSize="13" 
+                                   TextColor="{StaticResource Gray200}" FontAttributes="Bold"/>
+                                    <Label Text="50% Completed" 
+                                   Margin="5,0,0,0" 
+                                   FontSize="13" 
+                                   FontAttributes="Bold"
+                                   TextColor="#468e56"/>
+                                    <ProgressBar  HorizontalOptions="FillAndExpand"
+                                          Margin="5,0,10,0"
+                                          ProgressColor="#30998e"
+                                          VerticalOptions="CenterAndExpand"
+                                          Progress="0.5" />
+                                </VerticalStackLayout>
+                                <Image Source="play.png"
+                               Grid.Column="2"
+                               WidthRequest="20"
+                               HeightRequest="20"
+                               Margin="0,0,10,10"
+                               VerticalOptions="End"/>
+                            </Grid>
+                        </Border>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid RowDefinitions=".1*,.4*,.1*,.4*" Grid.Row="1" Margin="0,10,0,0 ">
+                <Label Text="Recommended For You"
+               TextColor="Black"
+               Margin="20,5,0,0"
+               FontAttributes="Bold"
+               FontFamily="RobotoR"
+               FontSize="18"/>
+                <ScrollView Orientation="Horizontal" Grid.Row="1" HorizontalScrollBarVisibility="Never">
+                    <HorizontalStackLayout Spacing="5"  Margin="0,5,0,0">
+                        <Border Background="Transparent" 
+                    WidthRequest="80" 
+                    HeightRequest="100"
+                    Margin="10,0,0,0"
+                    Stroke="Transparent" 
+                    StrokeShape="RoundRectangle 10,10,10,10">
+                            <Image Source="book5.png"
+                           Aspect="AspectFit"/>
+                        </Border>
+                        <Border Background="Transparent" 
+                    WidthRequest="80" 
+                    HeightRequest="100"
+                    Margin="-10,0,0,0"
+                    Stroke="Transparent" 
+                    StrokeShape="RoundRectangle 10,10,10,10">
+                            <Image Source="book6.png"/>
+                        </Border>
+                        <Border Background="Transparent" 
+                    WidthRequest="80" 
+                    HeightRequest="100"
+                    Margin="-10,0,0,0"
+                    Stroke="Transparent" 
+                    StrokeShape="RoundRectangle 10,10,10,10">
+                            <Image Source="book7.png"/>
+                        </Border>
+                        <Border Background="Transparent" 
+                    WidthRequest="80" 
+                    HeightRequest="100"
+                    Margin="-10,0,0,0"
+                    Stroke="Transparent" 
+                    StrokeShape="RoundRectangle 10,10,10,10">
+                            <Image Source="book8.png"/>
+                        </Border>
+                        <Border Background="Transparent" 
+                    WidthRequest="80" 
+                    HeightRequest="100"
+                    Margin="0,0,0,0"
+                    Stroke="Transparent" 
+                    StrokeShape="RoundRectangle 10,10,10,10">
+                            <Image Source="book9.png"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                </ScrollView>
+                <HorizontalStackLayout Spacing="180" Grid.Row="2" HeightRequest="40">
+                    <Label Text="Trending"
+                   TextColor="Black"
+                   Margin="20,10,-10,0"
+                   FontAttributes="Bold"
+                   FontFamily="RobotoR"
+                   FontSize="18"/>
+                    <Label Text="See All"
+   TextColor="#098f80"
+   Margin="40,10,-10,0"
+   FontAttributes="Bold"
+   FontFamily="SpaceGB"
+   FontSize="12"/>
+                </HorizontalStackLayout>
+                <ScrollView Orientation="Horizontal" Grid.Row="3" HorizontalScrollBarVisibility="Never">
+                    <HorizontalStackLayout Spacing="5"  Margin="0,5,0,0">
+                        <Border Background="Transparent" 
+        WidthRequest="100" 
+        HeightRequest="110"
+        Margin="0,0,0,0"
+        Stroke="Transparent" 
+        StrokeShape="RoundRectangle 10,10,10,10">
+                            <Image Source="book19.png"
+               Aspect="AspectFit"/>
+                        </Border>
+                        <Border Background="Transparent" 
+        WidthRequest="100" 
+        HeightRequest="110"
+        Margin="-10,0,0,0"
+        Stroke="Transparent" 
+        StrokeShape="RoundRectangle 10,10,10,10">
+                            <Image Source="book20.png"/>
+                        </Border>
+                        <Border Background="Transparent" 
+        WidthRequest="100" 
+        HeightRequest="110"
+        Margin="-10,0,0,0"
+        Stroke="Transparent" 
+        StrokeShape="RoundRectangle 10,10,10,10">
+                            <Image Source="book23.png"/>
+                        </Border>
+                        <Border Background="Transparent" 
+        WidthRequest="100" 
+        HeightRequest="110"
+        Margin="-10,0,0,0"
+        Stroke="Transparent" 
+        StrokeShape="RoundRectangle 10,10,10,10">
+                            <Image Source="book21.png" />
+                        </Border>
+                        <Border Background="Transparent" 
+        WidthRequest="100" 
+        HeightRequest="110"
+        Margin="-15,0,0,0"
+        Stroke="Transparent" 
+        StrokeShape="RoundRectangle 10,10,10,10">
+                            <Image Source="book26.png"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                </ScrollView>
+            </Grid>
+            <Frame VerticalOptions="EndAndExpand" 
+           Grid.Row="1"
+           Margin="-10,0,-10,-2"
+           Padding="0,0,0,0"
+           BorderColor="Transparent"
+           HeightRequest="55">
+                <Grid ColumnDefinitions="*,*,*">
+                    <VerticalStackLayout HorizontalOptions="Center"
+                                 HeightRequest="30"
+                                 Margin="0,-10">
+                        <Image Source="compass.png"
+                       WidthRequest="20"
+                       HeightRequest="20"/>
+                        <Label Text="Discover"
+                       TextColor="#008778"
+                       FontAttributes="Bold"
+                       FontFamily="Roboto"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center"
+                                 Grid.Column="1"
+                                 HeightRequest="30"
+                                 Margin="0,-10">
+                        <Image Source="glass.png"
+                       WidthRequest="20"
+                        HeightRequest="20"/>
+                        <Label Text="Search"
+                       FontFamily="RobotoR"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center"
+                                 Grid.Column="2"
+                                 HeightRequest="30"
+                                 Margin="0,-10">
+                        <Image Source="user.png"
+                       WidthRequest="20"
+                       HeightRequest="20"/>
+                        <Label Text="Profile"
+                       FontFamily="RobotoR"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ScrollView>
+    
+</ContentPage>

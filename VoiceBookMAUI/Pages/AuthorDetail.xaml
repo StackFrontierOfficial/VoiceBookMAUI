@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.AuthorDetail"
+             Title="AuthorDetail">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            
+        </Grid.RowDefinitions>
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <Image Source="arrowleft.png"
+            WidthRequest="30"
+            Margin="20,0,0,0"
+            HorizontalOptions="Start"
+            HeightRequest="30"/>
+        </Frame>
+        <HorizontalStackLayout Grid.Row="1">
+            <ImageButton Source="user2.png"
+                         VerticalOptions="Start"
+                         Margin="20,20,0,0"
+                         HorizontalOptions="Start"/>
+            <StackLayout Orientation="Vertical">
+                <Label Text="J.K. Rowling"
+                       WidthRequest="130"
+                       FontSize="16"
+                       FontFamily="RobotoR"
+                       FontAttributes="Bold"
+                       VerticalOptions="Start"
+                       Margin="20,30,0,0"
+                       HorizontalOptions="Start"/>
+                <Label Text="New Jersey"
+                       TextColor="{StaticResource Gray300}"
+                       WidthRequest="130"
+                       FontSize="12"
+                       FontFamily="SpaceGR"
+                       FontAttributes="Bold"
+                       VerticalOptions="Start"
+                       Margin="20,0,0,0"
+                       HorizontalOptions="Start"/>
+            </StackLayout>
+        </HorizontalStackLayout>
+        <VerticalStackLayout Grid.Row="2">
+            <Label Text="About Author"
+                   FontSize="16"
+                   FontFamily="RobotoR"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   Margin="20,20,0,0"
+                   HorizontalOptions="Start"/>
+            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+                   TextColor="{StaticResource Gray300}"
+                   FontSize="12"
+                   FontFamily="SpaceGR"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   Margin="20,0,10,0"
+                   HorizontalOptions="Start"/>
+            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+                   TextColor="{StaticResource Gray300}"
+                   FontSize="12"
+                   FontFamily="SpaceGR"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   Margin="20,0,10,0"
+                   HorizontalOptions="Start"/>
+            <Label Text="Author's Other Books"
+       FontSize="16"
+       FontFamily="RobotoR"
+       FontAttributes="Bold"
+       VerticalOptions="Start"
+       Margin="20,20,0,0"
+       HorizontalOptions="Start"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="3" VerticalOptions="Fill">
+            <HorizontalStackLayout Spacing="5"  Margin="0,5,0,0">
+                <Border Background="Transparent" 
+            WidthRequest="90" 
+            HeightRequest="110"
+            Margin="10,0,0,0"
+            Stroke="Transparent" 
+            StrokeShape="RoundRectangle 10,10,10,10">
+                    <Image Source="book12.png"
+               Aspect="AspectFit"/>
+                </Border>
+                <Border Background="Transparent" 
+            WidthRequest="80" 
+            HeightRequest="110"
+            Margin="-10,0,0,0"
+            Stroke="Transparent" 
+            StrokeShape="RoundRectangle 10,10,10,10">
+                    <Image Source="book6.png"/>
+                </Border>
+                <Border Background="Transparent" 
+            WidthRequest="90" 
+            HeightRequest="110"
+            Margin="0,0,0,0"
+            Stroke="Transparent" 
+            StrokeShape="RoundRectangle 10,10,10,10">
+                    <Image Source="book19.png"
+                           WidthRequest="80" 
+                            HeightRequest="110"/>
+                </Border>
+                <Border Background="Transparent" 
+            WidthRequest="80" 
+            HeightRequest="110"
+            Margin="0,0,10,0"
+            Stroke="Transparent" 
+            StrokeShape="RoundRectangle 10,10,10,10">
+                    <Image Source="book20.png"/>
+                </Border>
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="2" Grid.Row="3" Margin="0,5,0,0">
+                <Border Background="Transparent" 
+            WidthRequest="90" 
+            HeightRequest="110"
+            Margin="10,0,0,0"
+            Stroke="Transparent" 
+            StrokeShape="RoundRectangle 10,10,10,10">
+                    <Image Source="book5.png"
+               Aspect="AspectFit"/>
+                </Border>
+                <Border Background="Transparent" 
+            WidthRequest="90" 
+            HeightRequest="110"
+            Margin="-10,0,0,0"
+            Stroke="Transparent" 
+            StrokeShape="RoundRectangle 10,10,10,10">
+                    <Image Source="book7.png"/>
+                </Border>
+                <Border Background="Transparent" 
+            WidthRequest="90" 
+            HeightRequest="110"
+            Margin="0,0,0,0"
+            Stroke="Transparent" 
+            StrokeShape="RoundRectangle 10,10,10,10">
+                    <Image Source="book21.png"/>
+                </Border>
+                <Border Background="Transparent" 
+            WidthRequest="90" 
+            HeightRequest="110"
+            Margin="-5,0,0,0"
+            Stroke="Transparent" 
+            StrokeShape="RoundRectangle 10,10,10,10">
+                    <Image Source="book9.png"/>
+                </Border>
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="2" Grid.Row="3" Margin="0,5,0,0">
+                <Border Background="Transparent" 
+            WidthRequest="90" 
+            HeightRequest="110"
+            Margin="10,0,0,0"
+            Stroke="Transparent" 
+            StrokeShape="RoundRectangle 10,10,10,10">
+                    <Image Source="book10.png"
+               Aspect="AspectFit"/>
+                </Border>
+                <Border Background="Transparent" 
+            WidthRequest="90" 
+            HeightRequest="110"
+            Margin="-10,0,0,0"
+            Stroke="Transparent" 
+            StrokeShape="RoundRectangle 10,10,10,10">
+                    <Image Source="book11.png"/>
+                </Border>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        
+    </Grid>
+</ContentPage>

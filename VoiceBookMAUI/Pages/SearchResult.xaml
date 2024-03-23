@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.SearchResult"
+             Title="SearchResult">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <Image Source="arrowleft.png"
+                WidthRequest="30"
+                Margin="20,0,0,0"
+                HorizontalOptions="Start"
+                HeightRequest="30"/>
+        </Frame>
+        <VerticalStackLayout Grid.Row="1">
+            <Frame BackgroundColor="White" HasShadow="True"  BorderColor="#fafafa" HeightRequest="50" Margin="0,20,0,0"  WidthRequest="320" Padding="0,0,0,0" >
+                <SearchBar Placeholder="Harry Porter"
+               IsReadOnly="True"
+         FontSize="12"/>
+            </Frame>
+            <StackLayout Orientation="Horizontal" Margin="20,20,0,0" Spacing="10">
+                <Button Text="All Results"
+                        TextColor="White"
+                        WidthRequest="100"
+                        HeightRequest="40"
+                        BackgroundColor="#009788">
+                    <Button.Shadow>
+                        <Shadow Opacity="0.5"  Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+                <Button Text="Audiobooks"
+                        TextColor="#009788"
+                        WidthRequest="100"
+                        HeightRequest="40"
+                        Padding="0,0,0,0"
+                        BorderColor="#009788"
+                        FontAttributes="Bold"
+                        BorderWidth="1"
+                        BackgroundColor="White">
+                    <Button.Shadow>
+                        <Shadow Opacity="0.5"  Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+                <Button Text="Authors"
+                        TextColor="#009788"
+                        WidthRequest="100"
+                        HeightRequest="40"
+                        Padding="0,0,0,0"
+                        BorderColor="#009788"
+                        FontAttributes="Bold"
+                        BorderWidth="1"
+                        BackgroundColor="White">
+                    <Button.Shadow>
+                        <Shadow Opacity="0.5"  Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+            </StackLayout>
+            <Label Text="Audiobooks" 
+       FontSize="17"
+       Margin="20,20,0,0"
+       FontAttributes="Bold" 
+       FontFamily="RobotoR"/>
+        </VerticalStackLayout>
+        <ScrollView Orientation="Horizontal"  HorizontalScrollBarVisibility="Never" Grid.Row="2">
+            <HorizontalStackLayout  Spacing="-20" Margin="0,10,0,0">
+                <StackLayout Orientation="Vertical" Spacing="5">
+                    <Grid RowDefinitions=".6*,.3*,.1*" HeightRequest="150" WidthRequest="135">
+                        <Image Source="book9.png"
+                Grid.RowSpan="3"
+                Margin="10,0,0,0"
+                Aspect="Fill"/>
+                        <Label Text="4.0*"
+                               TextColor="White"
+                               VerticalOptions="End"
+                               Grid.Row="2"
+                               FontAttributes="Bold"
+                               FontFamily="SpaceGR"
+                               Padding="0,0,0,0"
+                               Margin="20,-10,0,10"
+                               HorizontalOptions="Start"/>
+                    </Grid>
+                    <Label Text="Harry porter and the Philosopher'... "
+                           WidthRequest="120"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           Margin="20,0,0,0"/>
+                    <Label Text="J.K.Rowling"
+                           WidthRequest="130"
+                           FontSize="14"
+                           FontFamily="SpaceGR"
+                           Margin="30,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Spacing="5">
+                    <Grid RowDefinitions=".6*,.3*,.1*" HeightRequest="150" WidthRequest="135">
+                        <Image Source="book22.png"
+ Grid.RowSpan="3"
+ Margin="10,0,0,0"
+ Aspect="Fill"/>
+                        <Label Text="4.5*"
+                TextColor="White"
+                VerticalOptions="End"
+                Grid.Row="2"
+                FontAttributes="Bold"
+                FontFamily="SpaceGR"
+                Padding="0,0,0,0"
+                Margin="20,-10,0,10"
+                HorizontalOptions="Start"/>
+                    </Grid>
+                    <Label Text="Harry porter and the Chamber of.."
+            WidthRequest="120"
+            FontSize="14"
+            FontAttributes="Bold"
+            Margin="20,0,0,0"/>
+                    <Label Text="J.K.Rowling"
+            WidthRequest="130"
+            FontSize="14"
+            FontFamily="SpaceGR"
+            Margin="30,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Spacing="5">
+                    <Grid RowDefinitions=".6*,.3*,.1*" HeightRequest="150" WidthRequest="135">
+                        <Image Source="book23.png"
+ Grid.RowSpan="3"
+ Margin="10,0,0,0"
+ Aspect="Fill"/>
+                        <Label Text="4.1*"
+                TextColor="White"
+                VerticalOptions="End"
+                Grid.Row="2"
+                FontAttributes="Bold"
+                FontFamily="SpaceGR"
+                Padding="0,0,0,0"
+                Margin="20,-10,0,10"
+                HorizontalOptions="Start"/>
+                    </Grid>
+                    <Label Text="Harry porter and the Prisoners of..."
+            WidthRequest="120"
+            FontSize="14"
+            FontAttributes="Bold"
+            Margin="20,0,0,0"/>
+                    <Label Text="J.K.Rowling"
+            WidthRequest="130"
+            FontSize="14"
+            FontFamily="SpaceGR"
+            Margin="30,0,0,0"/>
+                </StackLayout>
+            </HorizontalStackLayout>
+        </ScrollView>
+        <VerticalStackLayout Grid.Row="3">
+            <Label Text="Authors" 
+                   FontSize="17"
+                   Margin="20,20,0,0"
+                   FontAttributes="Bold" 
+                   FontFamily="RobotoR"/>
+            <ImageButton Source="user2.png"
+                   VerticalOptions="Start"
+                   Margin="20,0,0,0"
+                   HorizontalOptions="Start"/>
+            <Label Text="J.K.Rowling"
+                   WidthRequest="130"
+                   FontSize="12"
+                   FontFamily="SpaceGR"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   Margin="20,0,0,0"
+                   HorizontalOptions="Start"/>
+        </VerticalStackLayout>
+        
+    </Grid>
+</ContentPage>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.AddMoney"
+             Title="AddMoney">
+    
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Image Source="arrowleft.png"
+                WidthRequest="30"
+                Margin="20,0,0,0"
+                HeightRequest="30"/>
+                <Label Text="Add Money" 
+                FontSize="17"
+                Margin="0,5,0,0"
+                FontAttributes="Bold" 
+                FontFamily="RobotoR"/>
+            </StackLayout>
+        </Frame>
+        <VerticalStackLayout Grid.Row="1" Margin="20,20,20,0">
+            <Label Text="Enter Amount"
+                   TextColor="{StaticResource Gray300}"
+                   FontSize="13"
+                   FontFamily="SpaceGR"/>
+            <Entry Text="$15.00"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   FontFamily="RobotoR"/>
+            <Label Text="Select Payment Mode" 
+                   FontSize="17"
+                   Margin="0,10,0,0"
+                   FontAttributes="Bold" 
+                   FontFamily="Roboto"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="2" Margin="20,20,20,0" Spacing="10">
+            <Frame BackgroundColor="Transparent"
+                   HasShadow="True"
+                   WidthRequest="320"
+                   Padding="0,0,0,0"
+                   HeightRequest="50">
+                <Grid ColumnDefinitions=".2*,.6*,.2*">
+                    <Image Source="paypal.png"
+                           WidthRequest="30"
+                           HorizontalOptions="Start"
+                           Margin="10,0,0,0"
+                           HeightRequest="30"/>
+                    <Label Text="Paypal"
+                           TextColor="Black"
+                           Grid.Column="1"
+                           Margin="0,10,10,0"
+                           FontAttributes="Bold"
+                           FontSize="17"
+                           FontFamily="RobotoR"/>
+                    <RadioButton Grid.Column="2"
+                                 BorderColor="#009788"
+                                 Margin="10,0,0,0"
+                                 />
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="Transparent"
+                   HasShadow="True"
+                   WidthRequest="320"
+                   Padding="0,0,0,0"
+                   HeightRequest="50">
+                <Grid ColumnDefinitions=".2*,.6*,.2*">
+                    <Image Source="googlepay.png"
+                           WidthRequest="30"
+                           HorizontalOptions="Start"
+                           Margin="10,0,0,0"
+                           HeightRequest="30"/>
+                    <Label Text="Google Pay"
+                           TextColor="Black"
+                           Grid.Column="1"
+                           Margin="0,10,10,0"
+                           FontAttributes="Bold"
+                           FontSize="17"
+                           FontFamily="RobotoR"/>
+                    <RadioButton Grid.Column="2"
+                     BorderColor="#009788"
+                                 Margin="10,0,0,0"
+                     />
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="Transparent"
+                   HasShadow="True"
+                   WidthRequest="320"
+                   Padding="0,0,0,0"
+                   HeightRequest="50">
+                <Grid ColumnDefinitions=".2*,.6*,.2*">
+                    <Image Source="creditcard.png"
+                           WidthRequest="30"
+                           HorizontalOptions="Start"
+                           Margin="10,0,0,0"
+                           HeightRequest="30"/>
+                    <Label Text="Credit Card"
+                           TextColor="Black"
+                           Grid.Column="1"
+                           Margin="0,10,10,0"
+                           FontAttributes="Bold"
+                           FontSize="17"
+                           FontFamily="RobotoR"/>
+                    <RadioButton Grid.Column="2"
+                     BorderColor="#009788"
+                                 Margin="10,0,0,0"
+                     />
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="Transparent"
+                   HasShadow="True"
+                   WidthRequest="320"
+                   Padding="0,0,0,0"
+                   HeightRequest="50">
+                <Grid ColumnDefinitions=".2*,.6*,.2*">
+                    <Image Source="stripe.png"
+                           WidthRequest="30"
+                           HorizontalOptions="Start"
+                           Margin="10,0,0,0"
+                           HeightRequest="30"/>
+                    <Label Text="Stripe"
+                           TextColor="Black"
+                           Grid.Column="1"
+                           Margin="0,10,10,0"
+                           FontAttributes="Bold"
+                           FontSize="17"
+                           FontFamily="RobotoR"/>
+                    <RadioButton Grid.Column="2"
+                                 BorderColor="#009788"
+                                 Margin="10,0,0,0"
+                     />
+                </Grid>
+            </Frame>
+            <Button Text="Continue"
+                    BackgroundColor="#009788"
+                    WidthRequest="170"
+                    HeightRequest="50"
+                    VerticalOptions="Center"
+                    FontAttributes="Bold"
+                    FontSize="17"
+                    FontFamily="RobotoR"
+                    HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>

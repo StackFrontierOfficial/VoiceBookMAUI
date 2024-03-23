@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.PrivacyPolicy"
+             Title="PrivacyPolicy">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Image Source="arrowleft.png"
+                       WidthRequest="30"
+                       Margin="20,0,0,0"
+                       HeightRequest="30"/>
+                <Label Text="Privacy Policy" 
+                       FontSize="17"
+                       Margin="0,5,0,0"
+                       FontAttributes="Bold" 
+                       FontFamily="RobotoR"/>
+            </StackLayout>
+        </Frame>
+        <VerticalStackLayout Grid.Row="1" Margin="20,20,0,0">
+            <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+                   FontSize="11"
+                   TextColor="{StaticResource Gray200}"/>
+            <Label Text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,"
+                   FontSize="11"
+                   TextColor="{StaticResource Gray200}"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

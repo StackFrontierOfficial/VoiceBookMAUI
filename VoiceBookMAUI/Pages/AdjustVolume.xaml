@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.AdjustVolume"
+             Title="AdjustVolume"
+             Background="{StaticResource Gray300}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BackgroundColor="{StaticResource Gray300}" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <Image Source="arrowleft.png"
+               WidthRequest="30"
+               Margin="20,0,0,0"
+               HorizontalOptions="Start"
+               HeightRequest="30"/>
+        </Frame>
+        <VerticalStackLayout Grid.Row="1" Spacing="5" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            <Image Source="book18.png"
+               Margin="0,20,0,0"/>
+            <Label Text="Grant"
+               FontSize="18"
+               FontAttributes="Bold"
+               FontFamily="RobotoR"
+               HorizontalOptions="Center"/>
+            <Label Text="Rob Chernow"
+               FontSize="15"
+               FontFamily="RobotoR"
+               TextColor="{StaticResource Gray600}"
+               Margin="0,-5,0,0"
+               HorizontalOptions="Center"/>
+
+            <Label Text="Chapter 1: The Boy Who Lived"
+               FontSize="16"
+               FontFamily="RobotoR"
+               FontAttributes="Bold"
+               TextColor="{StaticResource Gray600}"
+               Margin="0,20,0,0"
+               HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+        <Grid Grid.Row="2" ColumnDefinitions=".1*,.7*,.2*" Margin="20,20,0,0">
+            <VerticalStackLayout>
+                <Label Text="&#xf028;"
+                   FontSize="18"
+                   FontFamily="FontAwesome"
+                   Margin="5,2,0,0"
+                   TextColor="Black"/>
+                <Label Text="00.01"
+                   FontSize="13"
+                   FontFamily="RobotoR"
+                   TextColor="{StaticResource Gray600}"
+                   Margin="0,0,0,0"
+                   HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="2">
+                <Label Text="&#xf017;"
+                   FontSize="18"
+                   FontFamily="FontAwesome"
+                   HorizontalOptions="Start"
+                   Margin="20,2,10,0"
+                   TextColor="Black"/>
+                <Label Text="-15.48"
+                   FontSize="13"
+                   FontFamily="RobotoR"
+                   TextColor="{StaticResource Gray600}"
+                   Margin="0,0,20,0"
+                   HorizontalOptions="Start"/>
+            </VerticalStackLayout>
+
+        </Grid>
+        <VerticalStackLayout Grid.Row="2" Margin="10,0,0,0" Spacing="20">
+            <Slider  Minimum="0"
+                 Maximum="100"
+                 Value="0"
+                 WidthRequest="340"
+                 HeightRequest="20"
+                 Margin="0,60,0,0"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="Start"
+                 ThumbColor="#009788"
+                 MinimumTrackColor="#009788"/>
+            <StackLayout Orientation="Horizontal" Spacing="20" Margin="10,0,0,0">
+                <ImageButton Source="previous.png"
+                         WidthRequest="30"
+                         Margin="20,0,0,0"
+                         HeightRequest="30"/>
+                <ImageButton Source="backward.png"
+                         WidthRequest="40"
+                         HeightRequest="40"/>
+                <ImageButton Source="playbutton.png"
+                         WidthRequest="50"
+                         HeightRequest="50"/>
+                <ImageButton Source="forward.png"
+                         WidthRequest="40"
+                         HeightRequest="40"/>
+                <ImageButton Source="next.png"
+                         WidthRequest="30"
+                         HeightRequest="30"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="10" Margin="50,0,20,20">
+                <Label Text="Chapter 1: The Boy Who Lived"
+                   FontAttributes="Bold"
+                   FontSize="13"/>
+                <Label Text="&#xf078;"
+                   FontSize="16"
+                   FontFamily="FontAwesome"
+                   HorizontalOptions="Start"
+                   Margin="0,0,10,0"
+                   TextColor="#009788"/>
+            </StackLayout>
+        </VerticalStackLayout>
+
+        <ListView ItemsSource="{Binding monkeys}" Grid.Row="3" HasUnevenRows="True" SelectionMode="None"  SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="20,10,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".2*" />
+                                <ColumnDefinition Width=".7*" />
+                                <ColumnDefinition Width=".1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding SerialNumber}"
+                               TextColor="#009788"
+                               FontSize="14"
+                               FontFamily="RobotoR"
+                               Margin="0,0,0,0"/>
+                            <VerticalStackLayout Grid.Column="1" Margin="-30,0,0,0">
+                                <Label Text="{Binding Chapter}"
+                                   FontAttributes="Bold"
+                                   TextColor="Black"/>
+                                <Label Text="{Binding Duration}"
+                                   TextColor="{StaticResource Gray500}"
+                                   FontSize="11"
+                                   FontFamily="SpaceGR"/>
+                            </VerticalStackLayout>
+                            <ImageButton Grid.Column="2" 
+                                     Source="playbutton.png"
+                                     WidthRequest="20"
+                                     HeightRequest="20"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Frame HeightRequest="150"
+               Grid.Row="3"
+               Padding="20,10,10,10"
+               VerticalOptions="End">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <HorizontalStackLayout Spacing="80">
+                    <Label Text="Adjust Volume &amp; Volume Boost"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           FontFamily="RobotoR"/>
+                    <Label Text="&#xf00d;"
+                           FontSize="16"
+                           FontFamily="FontAwesome"
+                           HorizontalOptions="Start"
+                           Margin="30,0,10,0"
+                           TextColor="Black"/>
+                </HorizontalStackLayout>
+                <Grid Grid.Row="1" RowDefinitions="*,*" ColumnDefinitions="*,*">
+                    <HorizontalStackLayout Spacing="10" HorizontalOptions="Start">
+                        <Label Text="&#xf028;"
+                               FontSize="14"
+                               FontFamily="FontAwesome"
+                               Margin="5,15,0,0"
+                               TextColor="Black"/>
+                        <Label Text="Volume"
+                               Margin="0,10,0,0"
+                               TextColor="Black"/>
+                    </HorizontalStackLayout>
+                    <Label Text="100%"
+                           Grid.Column="1"
+                           Margin="5,10,15,0"
+                           HorizontalOptions="End"/>
+                    <Slider  Minimum="0"
+                             Maximum="100"
+                             Value="100"
+                             WidthRequest="340"
+                             HeightRequest="20"
+                             Grid.Row="1"
+                             Grid.ColumnSpan="2"
+                             Margin="-10,0,0,0"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="Start"
+                             ThumbColor="#009788"
+                             MinimumTrackColor="#009788"/>
+                </Grid>
+                <Grid Grid.Row="2" RowDefinitions="*,*" ColumnDefinitions="*,*">
+                    <HorizontalStackLayout Spacing="10" HorizontalOptions="Start">
+                        <Label Text="&#xf026;"
+                               FontSize="14"
+                               FontFamily="FontAwesome"
+                               Margin="5,15,0,0"
+                               TextColor="Black"/>
+                        <Label Text="Volume Boost"
+                               Margin="0,10,0,0"
+                               TextColor="Black"/>
+                    </HorizontalStackLayout>
+                    <Label Text="30%"
+                           Grid.Column="1"
+                           Margin="5,10,15,0"
+                           HorizontalOptions="End"/>
+                    <Slider  Minimum="0"
+                             Maximum="100"
+                             Value="30"
+                             WidthRequest="340"
+                             HeightRequest="20"
+                             Grid.Row="1"
+                             Grid.ColumnSpan="2"
+                             Margin="-10,0,0,0"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="Start"
+                             ThumbColor="#009788"
+                             MinimumTrackColor="#009788"/>
+                </Grid>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

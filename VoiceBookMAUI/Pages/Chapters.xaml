@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.Chapters"
+             Title="Chapters">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".1*"/>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width=".4*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="arrowleft.png"
+                   WidthRequest="30"
+                   Margin="20,0,0,0"
+                   HeightRequest="30"/>
+                <Image Source="ribbon.png"
+                   WidthRequest="30"
+                   HorizontalOptions="Start"
+                   Grid.Column="2"
+                   Margin="20,0,0,0"
+                   HeightRequest="30"/>
+                <Image Source="share.png"
+                   WidthRequest="30"
+                   HorizontalOptions="End"
+                   Grid.Column="2"
+                   Margin="20,0,30,0"
+                   HeightRequest="30"/>
+            </Grid>
+        </Frame>
+        <VerticalStackLayout Grid.Row="1" Spacing="5" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            <Image Source="book18.png"
+               Margin="0,20,0,0"/>
+            <Label Text="Grant"
+               FontSize="20"
+               FontAttributes="Bold"
+               FontFamily="RobotoR"
+               HorizontalOptions="Center"/>
+            <Label Text="Rob Chernow"
+               FontSize="15"
+               FontFamily="RobotoR"
+               TextColor="{StaticResource Gray300}"
+               Margin="0,-5,0,0"
+               HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+                <Label Text="4.0"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   TextColor="#d4ad52"/>
+                <Label Text="&#xf005;"
+                   FontSize="12"
+                   FontFamily="FontAwesome"
+                   Margin="0,2,0,0"
+                   TextColor="#d4ad52"/>
+                <Label Text="120 rated"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource Gray300}"/>
+            </StackLayout>
+            <Label Text="Mystery Thriller and Suspense"
+               FontSize="11"
+               FontFamily="RobotoR"
+               TextColor="{StaticResource Gray300}"
+               Margin="0,-5,0,0"
+               HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+        <RoundRectangle Grid.Row="2"
+           BackgroundColor="#e7e7e7"
+           HeightRequest="50"
+           WidthRequest="300"
+           Margin="20,10,20,10"
+           CornerRadius="10"/>
+        <HorizontalStackLayout Grid.Row="2" Margin="35,10,0,10" HorizontalOptions="FillAndExpand">
+            <Button Text="About"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Margin="0,10,10,10"
+                    TextColor="Black"
+                    BackgroundColor="Transparent"
+                    FontFamily="RobotoR"
+                    FontAttributes="Bold"/>
+            <Frame HeightRequest="40"
+               WidthRequest="100"
+               Padding="0,-3,0,0"
+               BorderColor="Transparent">
+                <Button Text="Chapters"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"
+                   FontSize="17"
+                   TextColor="Black"
+                        Margin="0,0,0,0"
+                   BackgroundColor="Transparent"
+                   FontFamily="RobotoR"
+                   FontAttributes="Bold"/>
+            </Frame>
+            <Button Text="Review"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="18"
+                Margin="10,10,0,10"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                FontFamily="RobotoR"
+                FontAttributes="Bold"/>
+        </HorizontalStackLayout>
+        <ListView ItemsSource="{Binding books}" Grid.Row="3" HasUnevenRows="True" SelectionMode="None"  SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="20,10,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding SerialNumber}"
+                                    TextColor="#009788"
+                                   FontSize="14"
+                                   FontFamily="RobotoR"
+                                   Margin="10,0,10,10"/>
+                            <VerticalStackLayout Grid.Column="1" Margin="10,0,0,0" HeightRequest="40">
+                                <Label Text="{Binding Location}"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       FontFamily="SpaceGB"
+                                       TextColor="Black"/>
+                                <Label Text="{Binding Duration}"
+                                       FontSize="12"
+                                       FontFamily="SpaceGB"
+                                       TextColor="{StaticResource Gray300}"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <HorizontalStackLayout Grid.Row="3" VerticalOptions="EndAndExpand" Spacing="20" Margin="30,10,0,10">
+            <Frame Padding="10"
+               CornerRadius="5"
+               WidthRequest="50"
+               HeightRequest="50"
+               BorderColor="{StaticResource Gray100}"
+               BackgroundColor="White"
+               HasShadow="True">
+                <Button Text="&#xf019;"
+                    WidthRequest="50"
+                    FontSize="20"
+                    BackgroundColor="Transparent"
+                    TextColor="#009788"
+                    FontFamily="FontAwesome"
+                    HeightRequest="50"/>
+            </Frame>
+            <Frame Padding="10"
+               CornerRadius="5"
+               WidthRequest="230"
+               HeightRequest="50"
+               BorderColor="{StaticResource Gray100}"
+               BackgroundColor="#009788"
+               HasShadow="True">
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="&#xf04b;"
+                        WidthRequest="50"
+                        FontSize="20"
+                        Margin="20,0,0,0"
+                        HorizontalOptions="Start"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontFamily="FontAwesome"
+                        HeightRequest="50"/>
+                    <Label Text="Start Listening"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       Margin="0,0,0,0"
+                       FontFamily="RobotoR"/>
+                </StackLayout>
+
+            </Frame>
+
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

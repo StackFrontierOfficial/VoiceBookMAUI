@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceBookMAUI.Pages.LibraryShelves"
+             Title="LibraryShelves">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#fafafa" HeightRequest="50" Grid.Row="0" Padding="10,10,0,0" BorderColor="Transparent">
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Image Source="arrowleft.png"
+                   WidthRequest="30"
+                   Margin="20,0,0,0"
+                   HeightRequest="30"/>
+                <Label Text="My Library" 
+                   FontSize="17"
+                   Margin="0,5,0,0"
+                   FontAttributes="Bold" 
+                   FontFamily="RobotoR"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="{StaticResource Gray100}" 
+           HeightRequest="50" 
+               BorderColor="Transparent"
+               HasShadow="True"
+           Grid.Row="1" 
+           Margin="20,20,20,20"
+           Padding="5,0,0,0">
+            <HorizontalStackLayout>
+                <Button Text="Downloaded"
+                        TextColor="Black"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        WidthRequest="150"
+                        HeightRequest="40"
+                        FontSize="16"
+                        Margin="0,0,0,0"
+                        Padding="0,0,0,0"
+                        FontFamily="RobotoR"/>
+                <Button Text="Shelves"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        WidthRequest="150"
+                        HeightRequest="40"
+                        FontSize="16"
+                        Margin="10,0,0,0"
+                        Padding="0,0,0,0"
+                        FontFamily="RobotoR"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+
+        <Grid Grid.Row="2" RowDefinitions="*,*,*" ColumnSpacing="-20" RowSpacing="10" Margin="-5,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Orientation="Vertical" Spacing="5">
+                <Frame BackgroundColor="Transparent"
+           BorderColor="{StaticResource Gray200}"
+           Grid.RowSpan="2"
+           Padding="0,0,0,0"
+           WidthRequest="105"
+           Margin="20,0,0,0"
+           HeightRequest="150"
+           HasShadow="True">
+                    <Grid RowDefinitions=".7*,.2*,.1*">
+                        <Image Source="book9.png"
+                   Margin="0,0,0,0"
+                   Aspect="Fill"/>
+                        <Label Text="Harry potter's..."
+                   Grid.Row="1"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   Margin="2,0,0,0"/>
+                        <Label Text="5 Audiobooks"
+                   Grid.Row="2"
+                   FontSize="11"
+                   TextColor="{StaticResource Gray200}"
+                   FontFamily="SpaceGR"
+                   Margin="5,-10,0,0"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Spacing="5" Grid.Column="1">
+                <Frame BackgroundColor="Transparent"
+           BorderColor="{StaticResource Gray200}"
+           Grid.RowSpan="2"
+           Padding="0,0,0,0"
+           WidthRequest="105"
+           Margin="20,0,0,0"
+           HeightRequest="150"
+           HasShadow="True">
+                    <Grid RowDefinitions=".7*,.2*,.1*">
+                        <Image Source="book27.png"
+                   Margin="0,0,0,0"
+                   Aspect="Fill"/>
+                        <Label Text="History Novels"
+                   Grid.Row="1"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   Margin="2,0,0,0"/>
+                        <Label Text="4 Audiobooks"
+                   Grid.Row="2"
+                   FontSize="11"
+                   TextColor="{StaticResource Gray200}"
+                   FontFamily="SpaceGR"
+                   Margin="5,-10,0,0"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Grid.Column="2" Spacing="0">
+                <Frame BackgroundColor="Transparent"
+           BorderColor="{StaticResource Gray200}"
+           Grid.RowSpan="2"
+           Padding="0,0,0,0"
+           WidthRequest="105"
+           Margin="20,0,0,0"
+           HeightRequest="150"
+           HasShadow="True">
+                    <Grid RowDefinitions=".7*,.2*,.1*">
+                        <Image Source="book17.png"
+                   Margin="0,0,0,0"
+                   Aspect="Fill"/>
+                        <Label Text="Fa ntasy Novels"
+                   Grid.Row="1"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   Margin="2,0,0,0"/>
+                        <Label Text="6 Audiobooks"
+                   Grid.Row="2"
+                   FontSize="11"
+                   TextColor="{StaticResource Gray200}"
+                   FontFamily="SpaceGR"
+                   Margin="5,-10,0,0"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  Grid.Row="1" Spacing="0">
+                <Frame BackgroundColor="Transparent"
+                       BorderColor="{StaticResource Gray200}"
+                       Grid.RowSpan="2"
+                       Padding="0,0,0,0"
+                       WidthRequest="105"
+                       Margin="20,0,0,0"
+                       HeightRequest="150"
+                       HasShadow="True">
+                    <Grid RowDefinitions=".7*,.2*,.1*">
+                        <Image Source="book8.png"
+                               Margin="0,0,0,0"
+                               Aspect="Fill"/>
+                        <Label Text="Horror Novels"
+                               Grid.Row="1"
+                               FontSize="13"
+                               FontAttributes="Bold"
+                               Margin="2,0,0,0"/>
+                        <Label Text="4 Audiobooks"
+                               Grid.Row="2"
+                               FontSize="11"
+                               TextColor="{StaticResource Gray200}"
+                               FontFamily="SpaceGR"
+                               Margin="5,-10,0,0"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Grid.Column="1" Grid.Row="1" Spacing="0">
+                <Frame BackgroundColor="Transparent"
+            BorderColor="{StaticResource Gray200}"
+            Grid.RowSpan="2"
+            Padding="0,0,0,0"
+            WidthRequest="105"
+            Margin="20,0,0,0"
+            HeightRequest="150"
+            HasShadow="True">
+                    <Grid RowDefinitions=".7*,.2*,.1*">
+                        <Image Source="book28.png"
+                    Margin="0,0,0,0"
+                    Aspect="Fill"/>
+                        <Label Text="Classic Novels"
+                    Grid.Row="1"
+                    FontSize="13"
+                    FontAttributes="Bold"
+                    Margin="2,0,0,0"/>
+                        <Label Text="6 Audiobooks"
+                    Grid.Row="2"
+                    FontSize="11"
+                    TextColor="{StaticResource Gray200}"
+                    FontFamily="SpaceGR"
+                    Margin="5,-10,0,0"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </Grid>
+        <HorizontalStackLayout  Spacing="-10" Margin="0,10,0,0">
+
+
+
+            
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>
